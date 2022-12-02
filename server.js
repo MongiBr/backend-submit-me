@@ -24,6 +24,10 @@ app.use(cors(corsOptions));
 app.use(helmet());
 app.use(morgan("common"));
 
+app.get("/", function (req, res) {
+ res.send("server is running...");
+});
+
 app.use("/api/v1/feedback", feedbackRoute);
 
 mongoose
